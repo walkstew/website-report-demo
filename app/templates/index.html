@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>Website Report</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+  <script src="area_graphs.js"></script>
+  <script src="graphs.js"> </script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+{{ dat.header }}
+<div class="space"></div>
+{{ dat.topgraph }}
+<div class="space"></div>
+{{ dat.blog }}
+{{ dat.graph_detail }}
+<h1>Full Weekly Data</h1>
+{{dat.week_table}}
+<h1>Full Daily Data</h1>
+{{dat.day_table}}
+</body>
+</html>

@@ -1,0 +1,25 @@
+[flake8]
+exclude = 
+  venv/*
+  deployment-package/*
+
+ignore =
+  # Allow indents that are not multiple of four
+  E111
+  # Allow indents for comments that are not multiple of four
+  E114
+  # Allow continuations of two spaces
+  E121
+
+per-file-ignores =
+  # imported but unused, imported not at top of file
+  */__init__.py: F401, E402
+
+  # let the matplotlib tuple import slide
+  top_graphs.py: E401
+  graph_detail.py: E401
+
+  # Path stuff so imports work
+  testing/get_static.py: E402
+  testing/test_queries.py: E402
+  testing/test_form_attrition.py: E402

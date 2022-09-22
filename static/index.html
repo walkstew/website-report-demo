@@ -1,0 +1,1392 @@
+<html>
+<head>
+  <title>Website Report</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+  <script src="area_graphs.js"></script>
+  <script src="graphs.js"> </script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+<h2>Sunbound Website Report</h2>
+<h2>Launchpad</h2>
+<h3 id="report_time">Report updated at: </h3>
+<div id="report_time_source" class="hidden">1663872129325.6162</div>
+
+<h3 id="data_time">Data current through: </h3>
+<div id="data_time_source" class="hidden">1663692987045</div>
+
+<div class="space"></div>
+<div class="flex-container">
+  <div> <h1> Hits </h1> 
+    <h3> Last 7 Days: 67433</h3>
+    Previous 7: 62976<br>
+    <svg width="500" height="400" id="svg1"></svg>
+    <script>
+      rolling_graph("#svg1", [['8/24/22', 17180], ['8/25/22', 17094], ['8/26/22', 15392], ['8/27/22', 13559], ['8/28/22', 13711], ['8/29/22', 12438], ['8/30/22', 9452], ['8/31/22', 11046], ['9/1/22', 11635], ['9/2/22', 12253], ['9/3/22', 12246], ['9/4/22', 10959], ['9/5/22', 10335], ['9/6/22', 11811], ['9/7/22', 10791], ['9/8/22', 9677], ['9/9/22', 9114], ['9/10/22', 8955], ['9/11/22', 9486], ['9/12/22', 11344], ['9/13/22', 8997], ['9/14/22', 9763], ['9/15/22', 9509], ['9/16/22', 9445], ['9/17/22', 10058], ['9/18/22', 10648], ['9/19/22', 9267], ['9/20/22', 9633]])
+    </script>
+  </div>
+  <div> <h1> Unique Users </h1>
+    <h3> Last 7 Days: 52805</h3>
+    Previous 7: 53298<br>
+    <svg width="500" height="400" id="svg2"></svg>
+    <script>
+      rolling_graph("#svg2",[['8/24/22', 13143], ['8/25/22', 10974], ['8/26/22', 10081], ['8/27/22', 7998], ['8/28/22', 6383], ['8/29/22', 6653], ['8/30/22', 9139], ['8/31/22', 8213], ['9/1/22', 10369], ['9/2/22', 11743], ['9/3/22', 12507], ['9/4/22', 12996], ['9/5/22', 12136], ['9/6/22', 9677], ['9/7/22', 9373], ['9/8/22', 8094], ['9/9/22', 6606], ['9/10/22', 6327], ['9/11/22', 5511], ['9/12/22', 5683], ['9/13/22', 7614], ['9/14/22', 6354], ['9/15/22', 6325], ['9/16/22', 7469], ['9/17/22', 9683], ['9/18/22', 10547], ['9/19/22', 9758], ['9/20/22', 7544]])
+    </script>
+  </div>
+  <div><h1> Form Submissions </h1> 
+    <h3> Last 7 Days: 245</h3>
+    Previous 7: 383<br>
+    <svg width="500" height="400" id="svg3"></svg>
+    <script>
+      rolling_graph("#svg3", [['8/24/22', 152.4], ['8/25/22', 163.4], ['8/26/22', 174.6], ['8/27/22', 197.6], ['8/28/22', 236.6], ['8/29/22', 227.4], ['8/30/22', 187.9], ['8/31/22', 147.4], ['9/1/22', 134.1], ['9/2/22', 123.3], ['9/3/22', 88.9], ['9/4/22', 52.7], ['9/5/22', 59.6], ['9/6/22', 77.1], ['9/7/22', 68.7], ['9/8/22', 69.9], ['9/9/22', 63.7], ['9/10/22', 72.4], ['9/11/22', 72.9], ['9/12/22', 71.0], ['9/13/22', 54.7], ['9/14/22', 44.3], ['9/15/22', 38.7], ['9/16/22', 41.9], ['9/17/22', 34.1], ['9/18/22', 37.4], ['9/19/22', 28.9], ['9/20/22', 35.0]])
+    </script>
+    </div>
+</div> 
+<div class="space"></div>
+<div class="flex-container flex-container--varHeight">
+  <div> 
+  <h1>Blog Breakdown</h1>
+  Previous 28 Days
+  <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Title</th>
+      <th>Hits</th>
+      <th>Viewers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5 Things to Know Before Moving to a Senior Living Community</td>
+      <td>10311</td>
+      <td>7119</td>
+    </tr>
+    <tr>
+      <td>Is Georgia a Good Place to Retire to?</td>
+      <td>5638</td>
+      <td>4820</td>
+    </tr>
+    <tr>
+      <td>The 10 Most Popular Active Adult Communities in the Country</td>
+      <td>4201</td>
+      <td>3892</td>
+    </tr>
+    <tr>
+      <td>Sunbound Asks: Amy Bradbury of Sacred Space Organizing</td>
+      <td>2207</td>
+      <td>1586</td>
+    </tr>
+    <tr>
+      <td>Sunbound Asks: Heather Bifulco of Tidy Style</td>
+      <td>981</td>
+      <td>729</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<div class="flex-container flex-container--varHeight">
+  <div> 
+    <h1>Week Graphs</h1>
+    <div id="chart1"></div>
+    <div id="chart2"></div>
+    <div id="chart3"></div>
+    <div id="chart4"></div>
+    <div id="chart5"></div>
+    <script>
+      var svg = d3
+        .select("#chart1")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph([{'date': '8/22/22', 'Hits adwords': 22988, 'Hits nan': 545, 'Hits outbrain': 12108, 'Hits fb_paid': 375, 'Hits hs_automation': 1058, 'Hits google_paid': 28, 'Hits Herefish': 120, 'Hits hs_email': 606, 'Hits facebook': 537}, {'date': '8/29/22', 'Hits adwords': 4653, 'Hits nan': 826, 'Hits outbrain': 49969, 'Hits fb_paid': 596, 'Hits hs_automation': 718, 'Hits google_paid': 2406, 'Hits Herefish': 141, 'Hits hs_email': 2864, 'Hits facebook': 1068}, {'date': '9/5/22', 'Hits adwords': 48371, 'Hits nan': 473, 'Hits outbrain': 5019, 'Hits fb_paid': 390, 'Hits hs_automation': 975, 'Hits google_paid': 711, 'Hits Herefish': 530, 'Hits hs_email': 223, 'Hits facebook': 1582}, {'date': '9/12/22', 'Hits adwords': 28985, 'Hits nan': 863, 'Hits outbrain': 23768, 'Hits fb_paid': 1045, 'Hits hs_automation': 212, 'Hits google_paid': 45, 'Hits Herefish': 320, 'Hits hs_email': 345, 'Hits facebook': 569}], ['darkgoldenrod', 'coral', 'darkseagreen', 'blueviolet', 'darycyan', 'aqua', 'darksalmon', 'dimgrey', 'dodgerblue'], ['Hits adwords', 'Hits nan', 'Hits outbrain', 'Hits fb_paid', 'Hits hs_automation', 'Hits google_paid', 'Hits Herefish', 'Hits hs_email', 'Hits facebook'], "Hits by Source")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart2")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph([{'date': '8/22/22', 'Hits seo': 6556, 'Hits info': 27279, 'Hits lead': 4959, 'Hits legal': 1655, 'Hits job': 597}, {'date': '8/29/22', 'Hits seo': 862, 'Hits info': 4950, 'Hits lead': 917, 'Hits legal': 1252, 'Hits job': 1121}, {'date': '9/5/22', 'Hits seo': 25030, 'Hits info': 2041, 'Hits lead': 136, 'Hits legal': 1141, 'Hits job': 440}, {'date': '9/12/22', 'Hits seo': 57421, 'Hits info': 4213, 'Hits lead': 1483, 'Hits legal': 339, 'Hits job': 251}], ['darkgoldenrod', 'coral', 'darkseagreen', 'blueviolet', 'darycyan'], ['Hits seo', 'Hits info', 'Hits lead', 'Hits legal', 'Hits job'], "Hits by Page")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart3")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph([{'date': '8/22/22', 'Unique Users adwords': 1424, 'Unique Users nan': 716, 'Unique Users outbrain': 9358, 'Unique Users fb_paid': 595, 'Unique Users hs_automation': 189, 'Unique Users google_paid': 243, 'Unique Users Herefish': 343, 'Unique Users hs_email': 661, 'Unique Users facebook': 400}, {'date': '8/29/22', 'Unique Users adwords': 1650, 'Unique Users nan': 637, 'Unique Users outbrain': 24569, 'Unique Users fb_paid': 1540, 'Unique Users hs_automation': 931, 'Unique Users google_paid': 477, 'Unique Users Herefish': 207, 'Unique Users hs_email': 286, 'Unique Users facebook': 351}, {'date': '9/5/22', 'Unique Users adwords': 7508, 'Unique Users nan': 135, 'Unique Users outbrain': 28424, 'Unique Users fb_paid': 96, 'Unique Users hs_automation': 22, 'Unique Users google_paid': 139, 'Unique Users Herefish': 231, 'Unique Users hs_email': 299, 'Unique Users facebook': 210}, {'date': '9/12/22', 'Unique Users adwords': 11893, 'Unique Users nan': 571, 'Unique Users outbrain': 3027, 'Unique Users fb_paid': 1228, 'Unique Users hs_automation': 772, 'Unique Users google_paid': 311, 'Unique Users Herefish': 66, 'Unique Users hs_email': 485, 'Unique Users facebook': 276}], ['darkgoldenrod', 'coral', 'darkseagreen', 'blueviolet', 'darycyan', 'aqua', 'darksalmon', 'dimgrey', 'dodgerblue'], ['Unique Users adwords', 'Unique Users nan', 'Unique Users outbrain', 'Unique Users fb_paid', 'Unique Users hs_automation', 'Unique Users google_paid', 'Unique Users Herefish', 'Unique Users hs_email', 'Unique Users facebook'], "Unique Users by Source")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart4")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph([{'date': '8/22/22', 'Unique Users seo': 9684, 'Unique Users info': 9664, 'Unique Users lead': 6338, 'Unique Users legal': 142, 'Unique Users job': 26}, {'date': '8/29/22', 'Unique Users seo': 6800, 'Unique Users info': 12553, 'Unique Users lead': 4728, 'Unique Users legal': 154, 'Unique Users job': 70}, {'date': '9/5/22', 'Unique Users seo': 5986, 'Unique Users info': 2751, 'Unique Users lead': 207, 'Unique Users legal': 295, 'Unique Users job': 263}, {'date': '9/12/22', 'Unique Users seo': 69782, 'Unique Users info': 7341, 'Unique Users lead': 5911, 'Unique Users legal': 394, 'Unique Users job': 939}], ['darkgoldenrod', 'coral', 'darkseagreen', 'blueviolet', 'darycyan'], ['Unique Users seo', 'Unique Users info', 'Unique Users lead', 'Unique Users legal', 'Unique Users job'], "Unique Users by Page")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart5")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph([{'date': '8/22/22', 'Form Submissions adwords': 166, 'Form Submissions nan': 73, 'Form Submissions outbrain': 88, 'Form Submissions fb_paid': 41, 'Form Submissions hs_automation': 21, 'Form Submissions google_paid': 107, 'Form Submissions Herefish': 138, 'Form Submissions hs_email': 207, 'Form Submissions facebook': 9}, {'date': '8/29/22', 'Form Submissions adwords': 254, 'Form Submissions nan': 73, 'Form Submissions outbrain': 154, 'Form Submissions fb_paid': 217, 'Form Submissions hs_automation': 374, 'Form Submissions google_paid': 11, 'Form Submissions Herefish': 419, 'Form Submissions hs_email': 52, 'Form Submissions facebook': 38}, {'date': '9/5/22', 'Form Submissions adwords': 27, 'Form Submissions nan': 55, 'Form Submissions outbrain': 18, 'Form Submissions fb_paid': 58, 'Form Submissions hs_automation': 61, 'Form Submissions google_paid': 30, 'Form Submissions Herefish': 57, 'Form Submissions hs_email': 104, 'Form Submissions facebook': 8}, {'date': '9/12/22', 'Form Submissions adwords': 278, 'Form Submissions nan': 20, 'Form Submissions outbrain': 63, 'Form Submissions fb_paid': 34, 'Form Submissions hs_automation': 18, 'Form Submissions google_paid': 29, 'Form Submissions Herefish': 2, 'Form Submissions hs_email': 38, 'Form Submissions facebook': 15}], ['darkgoldenrod', 'coral', 'darkseagreen', 'blueviolet', 'darycyan', 'aqua', 'darksalmon', 'dimgrey', 'dodgerblue'], ['Form Submissions adwords', 'Form Submissions nan', 'Form Submissions outbrain', 'Form Submissions fb_paid', 'Form Submissions hs_automation', 'Form Submissions google_paid', 'Form Submissions Herefish', 'Form Submissions hs_email', 'Form Submissions facebook'], "Form Submissions by Source")
+    </script>
+  </div>
+  <div> 
+    <h1>Day Graphs</h1>
+    <div id="chart6"></div>
+    <div id="chart7"></div>
+    <div id="chart8"></div>
+    <div id="chart9"></div>
+    <div id="chart10"></div>
+    <script>
+      var svg = d3
+        .select("#chart6")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph([{'date': '8/22/22', 'Hits adwords': 1053, 'Hits nan': 2786, 'Hits outbrain': 2278, 'Hits fb_paid': 733, 'Hits hs_automation': 438, 'Hits google_paid': 681, 'Hits Herefish': 1302, 'Hits hs_email': 143, 'Hits facebook': 204}, {'date': '8/23/22', 'Hits adwords': 6347, 'Hits nan': 1837, 'Hits outbrain': 70, 'Hits fb_paid': 807, 'Hits hs_automation': 272, 'Hits google_paid': 1866, 'Hits Herefish': 1398, 'Hits hs_email': 1133, 'Hits facebook': 934}, {'date': '8/24/22', 'Hits adwords': 19, 'Hits nan': 452, 'Hits outbrain': 215, 'Hits fb_paid': 425, 'Hits hs_automation': 28, 'Hits google_paid': 2, 'Hits Herefish': 11, 'Hits hs_email': 170, 'Hits facebook': 105}, {'date': '8/25/22', 'Hits adwords': 1062, 'Hits nan': 995, 'Hits outbrain': 2699, 'Hits fb_paid': 293, 'Hits hs_automation': 1110, 'Hits google_paid': 103, 'Hits Herefish': 1747, 'Hits hs_email': 589, 'Hits facebook': 709}, {'date': '8/26/22', 'Hits adwords': 1268, 'Hits nan': 901, 'Hits outbrain': 788, 'Hits fb_paid': 714, 'Hits hs_automation': 1344, 'Hits google_paid': 58, 'Hits Herefish': 402, 'Hits hs_email': 100, 'Hits facebook': 693}, {'date': '8/27/22', 'Hits adwords': 26, 'Hits nan': 71, 'Hits outbrain': 74, 'Hits fb_paid': 92, 'Hits hs_automation': 79, 'Hits google_paid': 31, 'Hits Herefish': 26, 'Hits hs_email': 282, 'Hits facebook': 162}, {'date': '8/28/22', 'Hits adwords': 34, 'Hits nan': 790, 'Hits outbrain': 1991, 'Hits fb_paid': 1087, 'Hits hs_automation': 1514, 'Hits google_paid': 107, 'Hits Herefish': 449, 'Hits hs_email': 368, 'Hits facebook': 752}, {'date': '8/29/22', 'Hits adwords': 469, 'Hits nan': 430, 'Hits outbrain': 3087, 'Hits fb_paid': 344, 'Hits hs_automation': 140, 'Hits google_paid': 667, 'Hits Herefish': 330, 'Hits hs_email': 26, 'Hits facebook': 573}, {'date': '8/30/22', 'Hits adwords': 975, 'Hits nan': 587, 'Hits outbrain': 1753, 'Hits fb_paid': 145, 'Hits hs_automation': 316, 'Hits google_paid': 580, 'Hits Herefish': 522, 'Hits hs_email': 661, 'Hits facebook': 458}, {'date': '8/31/22', 'Hits adwords': 940, 'Hits nan': 57, 'Hits outbrain': 4075, 'Hits fb_paid': 413, 'Hits hs_automation': 182, 'Hits google_paid': 863, 'Hits Herefish': 49, 'Hits hs_email': 882, 'Hits facebook': 343}, {'date': '9/1/22', 'Hits adwords': 470, 'Hits nan': 1696, 'Hits outbrain': 2918, 'Hits fb_paid': 904, 'Hits hs_automation': 1567, 'Hits google_paid': 452, 'Hits Herefish': 672, 'Hits hs_email': 837, 'Hits facebook': 693}, {'date': '9/2/22', 'Hits adwords': 1201, 'Hits nan': 1196, 'Hits outbrain': 2024, 'Hits fb_paid': 1020, 'Hits hs_automation': 375, 'Hits google_paid': 772, 'Hits Herefish': 652, 'Hits hs_email': 613, 'Hits facebook': 220}, {'date': '9/3/22', 'Hits adwords': 174, 'Hits nan': 120, 'Hits outbrain': 241, 'Hits fb_paid': 75, 'Hits hs_automation': 19, 'Hits google_paid': 48, 'Hits Herefish': 213, 'Hits hs_email': 91, 'Hits facebook': 139}, {'date': '9/4/22', 'Hits adwords': 1489, 'Hits nan': 14, 'Hits outbrain': 1116, 'Hits fb_paid': 1166, 'Hits hs_automation': 61, 'Hits google_paid': 500, 'Hits Herefish': 505, 'Hits hs_email': 223, 'Hits facebook': 641}, {'date': '9/5/22', 'Hits adwords': 301, 'Hits nan': 112, 'Hits outbrain': 1123, 'Hits fb_paid': 363, 'Hits hs_automation': 443, 'Hits google_paid': 236, 'Hits Herefish': 262, 'Hits hs_email': 88, 'Hits facebook': 125}, {'date': '9/6/22', 'Hits adwords': 1203, 'Hits nan': 1466, 'Hits outbrain': 3136, 'Hits fb_paid': 948, 'Hits hs_automation': 1100, 'Hits google_paid': 413, 'Hits Herefish': 1332, 'Hits hs_email': 1529, 'Hits facebook': 1250}, {'date': '9/7/22', 'Hits adwords': 227, 'Hits nan': 630, 'Hits outbrain': 1000, 'Hits fb_paid': 572, 'Hits hs_automation': 909, 'Hits google_paid': 253, 'Hits Herefish': 35, 'Hits hs_email': 720, 'Hits facebook': 791}, {'date': '9/8/22', 'Hits adwords': 1054, 'Hits nan': 1101, 'Hits outbrain': 412, 'Hits fb_paid': 293, 'Hits hs_automation': 566, 'Hits google_paid': 1475, 'Hits Herefish': 544, 'Hits hs_email': 467, 'Hits facebook': 526}, {'date': '9/9/22', 'Hits adwords': 1003, 'Hits nan': 307, 'Hits outbrain': 1354, 'Hits fb_paid': 431, 'Hits hs_automation': 246, 'Hits google_paid': 589, 'Hits Herefish': 579, 'Hits hs_email': 231, 'Hits facebook': 714}, {'date': '9/10/22', 'Hits adwords': 31, 'Hits nan': 57, 'Hits outbrain': 15, 'Hits fb_paid': 51, 'Hits hs_automation': 77, 'Hits google_paid': 41, 'Hits Herefish': 49, 'Hits hs_email': 9, 'Hits facebook': 38}, {'date': '9/11/22', 'Hits adwords': 1394, 'Hits nan': 507, 'Hits outbrain': 4765, 'Hits fb_paid': 789, 'Hits hs_automation': 614, 'Hits google_paid': 968, 'Hits Herefish': 1013, 'Hits hs_email': 518, 'Hits facebook': 243}, {'date': '9/12/22', 'Hits adwords': 3014, 'Hits nan': 673, 'Hits outbrain': 1825, 'Hits fb_paid': 1765, 'Hits hs_automation': 880, 'Hits google_paid': 858, 'Hits Herefish': 392, 'Hits hs_email': 1052, 'Hits facebook': 192}, {'date': '9/13/22', 'Hits adwords': 135, 'Hits nan': 155, 'Hits outbrain': 1000, 'Hits fb_paid': 14, 'Hits hs_automation': 252, 'Hits google_paid': 82, 'Hits Herefish': 34, 'Hits hs_email': 80, 'Hits facebook': 108}, {'date': '9/14/22', 'Hits adwords': 2456, 'Hits nan': 241, 'Hits outbrain': 655, 'Hits fb_paid': 217, 'Hits hs_automation': 796, 'Hits google_paid': 463, 'Hits Herefish': 729, 'Hits hs_email': 731, 'Hits facebook': 227}, {'date': '9/15/22', 'Hits adwords': 1005, 'Hits nan': 94, 'Hits outbrain': 1818, 'Hits fb_paid': 28, 'Hits hs_automation': 326, 'Hits google_paid': 58, 'Hits Herefish': 151, 'Hits hs_email': 347, 'Hits facebook': 236}, {'date': '9/16/22', 'Hits adwords': 579, 'Hits nan': 240, 'Hits outbrain': 153, 'Hits fb_paid': 845, 'Hits hs_automation': 143, 'Hits google_paid': 762, 'Hits Herefish': 209, 'Hits hs_email': 31, 'Hits facebook': 479}, {'date': '9/17/22', 'Hits adwords': 226, 'Hits nan': 3, 'Hits outbrain': 416, 'Hits fb_paid': 329, 'Hits hs_automation': 81, 'Hits google_paid': 289, 'Hits Herefish': 283, 'Hits hs_email': 25, 'Hits facebook': 80}, {'date': '9/18/22', 'Hits adwords': 776, 'Hits nan': 1244, 'Hits outbrain': 1239, 'Hits fb_paid': 1759, 'Hits hs_automation': 1357, 'Hits google_paid': 378, 'Hits Herefish': 686, 'Hits hs_email': 179, 'Hits facebook': 418}], ['darkgoldenrod', 'coral', 'darkseagreen', 'blueviolet', 'darycyan', 'aqua', 'darksalmon', 'dimgrey', 'dodgerblue'], ['Hits adwords', 'Hits nan', 'Hits outbrain', 'Hits fb_paid', 'Hits hs_automation', 'Hits google_paid', 'Hits Herefish', 'Hits hs_email', 'Hits facebook'], "Hits by Source")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart7")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph([{'date': '8/22/22', 'Hits seo': 3396, 'Hits info': 2764, 'Hits lead': 2294, 'Hits legal': 411, 'Hits job': 374}, {'date': '8/23/22', 'Hits seo': 6163, 'Hits info': 2914, 'Hits lead': 7, 'Hits legal': 3886, 'Hits job': 2563}, {'date': '8/24/22', 'Hits seo': 428, 'Hits info': 276, 'Hits lead': 356, 'Hits legal': 458, 'Hits job': 414}, {'date': '8/25/22', 'Hits seo': 914, 'Hits info': 662, 'Hits lead': 499, 'Hits legal': 1180, 'Hits job': 709}, {'date': '8/26/22', 'Hits seo': 600, 'Hits info': 48, 'Hits lead': 1899, 'Hits legal': 331, 'Hits job': 875}, {'date': '8/27/22', 'Hits seo': 325, 'Hits info': 143, 'Hits lead': 84, 'Hits legal': 205, 'Hits job': 99}, {'date': '8/28/22', 'Hits seo': 6567, 'Hits info': 2886, 'Hits lead': 1287, 'Hits legal': 61, 'Hits job': 681}, {'date': '8/29/22', 'Hits seo': 3094, 'Hits info': 306, 'Hits lead': 168, 'Hits legal': 251, 'Hits job': 55}, {'date': '8/30/22', 'Hits seo': 1351, 'Hits info': 298, 'Hits lead': 600, 'Hits legal': 863, 'Hits job': 184}, {'date': '8/31/22', 'Hits seo': 1822, 'Hits info': 1923, 'Hits lead': 958, 'Hits legal': 1121, 'Hits job': 895}, {'date': '9/1/22', 'Hits seo': 2992, 'Hits info': 3162, 'Hits lead': 604, 'Hits legal': 289, 'Hits job': 140}, {'date': '9/2/22', 'Hits seo': 2697, 'Hits info': 577, 'Hits lead': 1549, 'Hits legal': 941, 'Hits job': 509}, {'date': '9/3/22', 'Hits seo': 134, 'Hits info': 95, 'Hits lead': 45, 'Hits legal': 218, 'Hits job': 40}, {'date': '9/4/22', 'Hits seo': 189, 'Hits info': 1394, 'Hits lead': 1264, 'Hits legal': 357, 'Hits job': 643}, {'date': '9/5/22', 'Hits seo': 499, 'Hits info': 451, 'Hits lead': 430, 'Hits legal': 427, 'Hits job': 710}, {'date': '9/6/22', 'Hits seo': 3926, 'Hits info': 457, 'Hits lead': 250, 'Hits legal': 2126, 'Hits job': 489}, {'date': '9/7/22', 'Hits seo': 1019, 'Hits info': 509, 'Hits lead': 36, 'Hits legal': 266, 'Hits job': 419}, {'date': '9/8/22', 'Hits seo': 1757, 'Hits info': 707, 'Hits lead': 44, 'Hits legal': 641, 'Hits job': 13}, {'date': '9/9/22', 'Hits seo': 2105, 'Hits info': 1212, 'Hits lead': 491, 'Hits legal': 736, 'Hits job': 401}, {'date': '9/10/22', 'Hits seo': 34, 'Hits info': 16, 'Hits lead': 40, 'Hits legal': 21, 'Hits job': 65}, {'date': '9/11/22', 'Hits seo': 328, 'Hits info': 752, 'Hits lead': 1021, 'Hits legal': 26, 'Hits job': 343}, {'date': '9/12/22', 'Hits seo': 5498, 'Hits info': 332, 'Hits lead': 995, 'Hits legal': 131, 'Hits job': 969}, {'date': '9/13/22', 'Hits seo': 887, 'Hits info': 93, 'Hits lead': 74, 'Hits legal': 174, 'Hits job': 102}, {'date': '9/14/22', 'Hits seo': 1413, 'Hits info': 3054, 'Hits lead': 337, 'Hits legal': 1091, 'Hits job': 345}, {'date': '9/15/22', 'Hits seo': 2727, 'Hits info': 242, 'Hits lead': 341, 'Hits legal': 422, 'Hits job': 21}, {'date': '9/16/22', 'Hits seo': 3680, 'Hits info': 1160, 'Hits lead': 533, 'Hits legal': 276, 'Hits job': 865}, {'date': '9/17/22', 'Hits seo': 1493, 'Hits info': 700, 'Hits lead': 517, 'Hits legal': 380, 'Hits job': 12}, {'date': '9/18/22', 'Hits seo': 5445, 'Hits info': 1557, 'Hits lead': 1051, 'Hits legal': 807, 'Hits job': 517}], ['darkgoldenrod', 'coral', 'darkseagreen', 'blueviolet', 'darycyan'], ['Hits seo', 'Hits info', 'Hits lead', 'Hits legal', 'Hits job'], "Hits by Page")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart8")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph([{'date': '8/22/22', 'Unique Users adwords': 1611, 'Unique Users nan': 13, 'Unique Users outbrain': 1464, 'Unique Users fb_paid': 189, 'Unique Users hs_automation': 117, 'Unique Users google_paid': 1081, 'Unique Users Herefish': 736, 'Unique Users hs_email': 1015, 'Unique Users facebook': 422}, {'date': '8/23/22', 'Unique Users adwords': 70, 'Unique Users nan': 9, 'Unique Users outbrain': 859, 'Unique Users fb_paid': 136, 'Unique Users hs_automation': 113, 'Unique Users google_paid': 9, 'Unique Users Herefish': 133, 'Unique Users hs_email': 45, 'Unique Users facebook': 134}, {'date': '8/24/22', 'Unique Users adwords': 989, 'Unique Users nan': 1396, 'Unique Users outbrain': 5168, 'Unique Users fb_paid': 1002, 'Unique Users hs_automation': 1755, 'Unique Users google_paid': 477, 'Unique Users Herefish': 256, 'Unique Users hs_email': 271, 'Unique Users facebook': 820}, {'date': '8/25/22', 'Unique Users adwords': 129, 'Unique Users nan': 143, 'Unique Users outbrain': 170, 'Unique Users fb_paid': 107, 'Unique Users hs_automation': 93, 'Unique Users google_paid': 23, 'Unique Users Herefish': 111, 'Unique Users hs_email': 32, 'Unique Users facebook': 39}, {'date': '8/26/22', 'Unique Users adwords': 49, 'Unique Users nan': 90, 'Unique Users outbrain': 395, 'Unique Users fb_paid': 159, 'Unique Users hs_automation': 178, 'Unique Users google_paid': 15, 'Unique Users Herefish': 133, 'Unique Users hs_email': 117, 'Unique Users facebook': 35}, {'date': '8/27/22', 'Unique Users adwords': 120, 'Unique Users nan': 173, 'Unique Users outbrain': 245, 'Unique Users fb_paid': 44, 'Unique Users hs_automation': 15, 'Unique Users google_paid': 13, 'Unique Users Herefish': 69, 'Unique Users hs_email': 19, 'Unique Users facebook': 4}, {'date': '8/28/22', 'Unique Users adwords': 1607, 'Unique Users nan': 754, 'Unique Users outbrain': 1620, 'Unique Users fb_paid': 538, 'Unique Users hs_automation': 98, 'Unique Users google_paid': 26, 'Unique Users Herefish': 66, 'Unique Users hs_email': 352, 'Unique Users facebook': 423}, {'date': '8/29/22', 'Unique Users adwords': 1935, 'Unique Users nan': 1152, 'Unique Users outbrain': 54, 'Unique Users fb_paid': 222, 'Unique Users hs_automation': 1065, 'Unique Users google_paid': 1251, 'Unique Users Herefish': 165, 'Unique Users hs_email': 96, 'Unique Users facebook': 806}, {'date': '8/30/22', 'Unique Users adwords': 1224, 'Unique Users nan': 599, 'Unique Users outbrain': 3167, 'Unique Users fb_paid': 382, 'Unique Users hs_automation': 483, 'Unique Users google_paid': 1705, 'Unique Users Herefish': 259, 'Unique Users hs_email': 527, 'Unique Users facebook': 762}, {'date': '8/31/22', 'Unique Users adwords': 96, 'Unique Users nan': 1115, 'Unique Users outbrain': 921, 'Unique Users fb_paid': 1206, 'Unique Users hs_automation': 1055, 'Unique Users google_paid': 1001, 'Unique Users Herefish': 626, 'Unique Users hs_email': 796, 'Unique Users facebook': 854}, {'date': '9/1/22', 'Unique Users adwords': 1737, 'Unique Users nan': 81, 'Unique Users outbrain': 56, 'Unique Users fb_paid': 32, 'Unique Users hs_automation': 12, 'Unique Users google_paid': 1555, 'Unique Users Herefish': 584, 'Unique Users hs_email': 980, 'Unique Users facebook': 1508}, {'date': '9/2/22', 'Unique Users adwords': 344, 'Unique Users nan': 609, 'Unique Users outbrain': 3711, 'Unique Users fb_paid': 1185, 'Unique Users hs_automation': 103, 'Unique Users google_paid': 226, 'Unique Users Herefish': 623, 'Unique Users hs_email': 269, 'Unique Users facebook': 162}, {'date': '9/3/22', 'Unique Users adwords': 109, 'Unique Users nan': 697, 'Unique Users outbrain': 786, 'Unique Users fb_paid': 37, 'Unique Users hs_automation': 1071, 'Unique Users google_paid': 382, 'Unique Users Herefish': 387, 'Unique Users hs_email': 592, 'Unique Users facebook': 236}, {'date': '9/4/22', 'Unique Users adwords': 308, 'Unique Users nan': 863, 'Unique Users outbrain': 590, 'Unique Users fb_paid': 458, 'Unique Users hs_automation': 746, 'Unique Users google_paid': 539, 'Unique Users Herefish': 1189, 'Unique Users hs_email': 1033, 'Unique Users facebook': 95}, {'date': '9/5/22', 'Unique Users adwords': 712, 'Unique Users nan': 183, 'Unique Users outbrain': 716, 'Unique Users fb_paid': 394, 'Unique Users hs_automation': 560, 'Unique Users google_paid': 80, 'Unique Users Herefish': 260, 'Unique Users hs_email': 473, 'Unique Users facebook': 248}, {'date': '9/6/22', 'Unique Users adwords': 405, 'Unique Users nan': 211, 'Unique Users outbrain': 450, 'Unique Users fb_paid': 24, 'Unique Users hs_automation': 112, 'Unique Users google_paid': 389, 'Unique Users Herefish': 307, 'Unique Users hs_email': 81, 'Unique Users facebook': 2}, {'date': '9/7/22', 'Unique Users adwords': 2039, 'Unique Users nan': 302, 'Unique Users outbrain': 195, 'Unique Users fb_paid': 180, 'Unique Users hs_automation': 683, 'Unique Users google_paid': 180, 'Unique Users Herefish': 857, 'Unique Users hs_email': 12, 'Unique Users facebook': 725}, {'date': '9/8/22', 'Unique Users adwords': 701, 'Unique Users nan': 614, 'Unique Users outbrain': 562, 'Unique Users fb_paid': 385, 'Unique Users hs_automation': 653, 'Unique Users google_paid': 175, 'Unique Users Herefish': 82, 'Unique Users hs_email': 509, 'Unique Users facebook': 46}, {'date': '9/9/22', 'Unique Users adwords': 106, 'Unique Users nan': 1, 'Unique Users outbrain': 23, 'Unique Users fb_paid': 25, 'Unique Users hs_automation': 22, 'Unique Users google_paid': 33, 'Unique Users Herefish': 107, 'Unique Users hs_email': 25, 'Unique Users facebook': 5}, {'date': '9/10/22', 'Unique Users adwords': 271, 'Unique Users nan': 208, 'Unique Users outbrain': 436, 'Unique Users fb_paid': 63, 'Unique Users hs_automation': 459, 'Unique Users google_paid': 775, 'Unique Users Herefish': 15, 'Unique Users hs_email': 176, 'Unique Users facebook': 120}, {'date': '9/11/22', 'Unique Users adwords': 578, 'Unique Users nan': 157, 'Unique Users outbrain': 1104, 'Unique Users fb_paid': 747, 'Unique Users hs_automation': 369, 'Unique Users google_paid': 44, 'Unique Users Herefish': 382, 'Unique Users hs_email': 89, 'Unique Users facebook': 758}, {'date': '9/12/22', 'Unique Users adwords': 4, 'Unique Users nan': 417, 'Unique Users outbrain': 976, 'Unique Users fb_paid': 344, 'Unique Users hs_automation': 1033, 'Unique Users google_paid': 651, 'Unique Users Herefish': 266, 'Unique Users hs_email': 90, 'Unique Users facebook': 324}, {'date': '9/13/22', 'Unique Users adwords': 2674, 'Unique Users nan': 1425, 'Unique Users outbrain': 1757, 'Unique Users fb_paid': 342, 'Unique Users hs_automation': 1261, 'Unique Users google_paid': 279, 'Unique Users Herefish': 921, 'Unique Users hs_email': 1969, 'Unique Users facebook': 1390}, {'date': '9/14/22', 'Unique Users adwords': 141, 'Unique Users nan': 27, 'Unique Users outbrain': 344, 'Unique Users fb_paid': 135, 'Unique Users hs_automation': 34, 'Unique Users google_paid': 50, 'Unique Users Herefish': 77, 'Unique Users hs_email': 152, 'Unique Users facebook': 97}, {'date': '9/15/22', 'Unique Users adwords': 445, 'Unique Users nan': 241, 'Unique Users outbrain': 2293, 'Unique Users fb_paid': 185, 'Unique Users hs_automation': 655, 'Unique Users google_paid': 260, 'Unique Users Herefish': 329, 'Unique Users hs_email': 231, 'Unique Users facebook': 100}, {'date': '9/16/22', 'Unique Users adwords': 997, 'Unique Users nan': 24, 'Unique Users outbrain': 3003, 'Unique Users fb_paid': 450, 'Unique Users hs_automation': 42, 'Unique Users google_paid': 603, 'Unique Users Herefish': 439, 'Unique Users hs_email': 355, 'Unique Users facebook': 161}, {'date': '9/17/22', 'Unique Users adwords': 316, 'Unique Users nan': 242, 'Unique Users outbrain': 4217, 'Unique Users fb_paid': 351, 'Unique Users hs_automation': 706, 'Unique Users google_paid': 789, 'Unique Users Herefish': 870, 'Unique Users hs_email': 629, 'Unique Users facebook': 888}, {'date': '9/18/22', 'Unique Users adwords': 892, 'Unique Users nan': 887, 'Unique Users outbrain': 3867, 'Unique Users fb_paid': 426, 'Unique Users hs_automation': 1162, 'Unique Users google_paid': 61, 'Unique Users Herefish': 8, 'Unique Users hs_email': 351, 'Unique Users facebook': 18}], ['darkgoldenrod', 'coral', 'darkseagreen', 'blueviolet', 'darycyan', 'aqua', 'darksalmon', 'dimgrey', 'dodgerblue'], ['Unique Users adwords', 'Unique Users nan', 'Unique Users outbrain', 'Unique Users fb_paid', 'Unique Users hs_automation', 'Unique Users google_paid', 'Unique Users Herefish', 'Unique Users hs_email', 'Unique Users facebook'], "Unique Users by Source")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart9")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph([{'date': '8/22/22', 'Unique Users seo': 1656, 'Unique Users info': 998, 'Unique Users lead': 65, 'Unique Users legal': 1028, 'Unique Users job': 9}, {'date': '8/23/22', 'Unique Users seo': 463, 'Unique Users info': 302, 'Unique Users lead': 63, 'Unique Users legal': 119, 'Unique Users job': 104}, {'date': '8/24/22', 'Unique Users seo': 728, 'Unique Users info': 2636, 'Unique Users lead': 2066, 'Unique Users legal': 548, 'Unique Users job': 782}, {'date': '8/25/22', 'Unique Users seo': 452, 'Unique Users info': 3, 'Unique Users lead': 121, 'Unique Users legal': 109, 'Unique Users job': 43}, {'date': '8/26/22', 'Unique Users seo': 415, 'Unique Users info': 172, 'Unique Users lead': 173, 'Unique Users legal': 69, 'Unique Users job': 87}, {'date': '8/27/22', 'Unique Users seo': 65, 'Unique Users info': 115, 'Unique Users lead': 22, 'Unique Users legal': 72, 'Unique Users job': 35}, {'date': '8/28/22', 'Unique Users seo': 1357, 'Unique Users info': 26, 'Unique Users lead': 657, 'Unique Users legal': 252, 'Unique Users job': 373}, {'date': '8/29/22', 'Unique Users seo': 779, 'Unique Users info': 2528, 'Unique Users lead': 1070, 'Unique Users legal': 601, 'Unique Users job': 570}, {'date': '8/30/22', 'Unique Users seo': 6022, 'Unique Users info': 1422, 'Unique Users lead': 2575, 'Unique Users legal': 704, 'Unique Users job': 135}, {'date': '8/31/22', 'Unique Users seo': 914, 'Unique Users info': 957, 'Unique Users lead': 219, 'Unique Users legal': 1675, 'Unique Users job': 974}, {'date': '9/1/22', 'Unique Users seo': 7173, 'Unique Users info': 931, 'Unique Users lead': 421, 'Unique Users legal': 1526, 'Unique Users job': 73}, {'date': '9/2/22', 'Unique Users seo': 2312, 'Unique Users info': 1078, 'Unique Users lead': 499, 'Unique Users legal': 110, 'Unique Users job': 473}, {'date': '9/3/22', 'Unique Users seo': 596, 'Unique Users info': 571, 'Unique Users lead': 376, 'Unique Users legal': 134, 'Unique Users job': 389}, {'date': '9/4/22', 'Unique Users seo': 1553, 'Unique Users info': 695, 'Unique Users lead': 1430, 'Unique Users legal': 761, 'Unique Users job': 1312}, {'date': '9/5/22', 'Unique Users seo': 1263, 'Unique Users info': 577, 'Unique Users lead': 337, 'Unique Users legal': 285, 'Unique Users job': 181}, {'date': '9/6/22', 'Unique Users seo': 69, 'Unique Users info': 123, 'Unique Users lead': 181, 'Unique Users legal': 235, 'Unique Users job': 164}, {'date': '9/7/22', 'Unique Users seo': 1490, 'Unique Users info': 1571, 'Unique Users lead': 1475, 'Unique Users legal': 190, 'Unique Users job': 382}, {'date': '9/8/22', 'Unique Users seo': 2314, 'Unique Users info': 1002, 'Unique Users lead': 187, 'Unique Users legal': 423, 'Unique Users job': 61}, {'date': '9/9/22', 'Unique Users seo': 581, 'Unique Users info': 150, 'Unique Users lead': 74, 'Unique Users legal': 70, 'Unique Users job': 64}, {'date': '9/10/22', 'Unique Users seo': 668, 'Unique Users info': 186, 'Unique Users lead': 352, 'Unique Users legal': 246, 'Unique Users job': 436}, {'date': '9/11/22', 'Unique Users seo': 597, 'Unique Users info': 185, 'Unique Users lead': 348, 'Unique Users legal': 295, 'Unique Users job': 205}, {'date': '9/12/22', 'Unique Users seo': 1127, 'Unique Users info': 1109, 'Unique Users lead': 354, 'Unique Users legal': 369, 'Unique Users job': 415}, {'date': '9/13/22', 'Unique Users seo': 1175, 'Unique Users info': 394, 'Unique Users lead': 1034, 'Unique Users legal': 303, 'Unique Users job': 1344}, {'date': '9/14/22', 'Unique Users seo': 203, 'Unique Users info': 18, 'Unique Users lead': 100, 'Unique Users legal': 67, 'Unique Users job': 20}, {'date': '9/15/22', 'Unique Users seo': 1290, 'Unique Users info': 983, 'Unique Users lead': 157, 'Unique Users legal': 299, 'Unique Users job': 39}, {'date': '9/16/22', 'Unique Users seo': 803, 'Unique Users info': 1183, 'Unique Users lead': 520, 'Unique Users legal': 449, 'Unique Users job': 269}, {'date': '9/17/22', 'Unique Users seo': 6390, 'Unique Users info': 492, 'Unique Users lead': 1157, 'Unique Users legal': 1722, 'Unique Users job': 1140}, {'date': '9/18/22', 'Unique Users seo': 2760, 'Unique Users info': 30, 'Unique Users lead': 134, 'Unique Users legal': 861, 'Unique Users job': 444}], ['darkgoldenrod', 'coral', 'darkseagreen', 'blueviolet', 'darycyan'], ['Unique Users seo', 'Unique Users info', 'Unique Users lead', 'Unique Users legal', 'Unique Users job'], "Unique Users by Page")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart10")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph([{'date': '8/22/22', 'Form Submissions adwords': 79, 'Form Submissions nan': 12, 'Form Submissions outbrain': 0, 'Form Submissions fb_paid': 1, 'Form Submissions hs_automation': 4, 'Form Submissions google_paid': 11, 'Form Submissions Herefish': 13, 'Form Submissions hs_email': 10, 'Form Submissions facebook': 7}, {'date': '8/23/22', 'Form Submissions adwords': 123, 'Form Submissions nan': 27, 'Form Submissions outbrain': 44, 'Form Submissions fb_paid': 1, 'Form Submissions hs_automation': 23, 'Form Submissions google_paid': 33, 'Form Submissions Herefish': 1, 'Form Submissions hs_email': 26, 'Form Submissions facebook': 8}, {'date': '8/24/22', 'Form Submissions adwords': 318, 'Form Submissions nan': 3, 'Form Submissions outbrain': 17, 'Form Submissions fb_paid': 34, 'Form Submissions hs_automation': 14, 'Form Submissions google_paid': 12, 'Form Submissions Herefish': 4, 'Form Submissions hs_email': 8, 'Form Submissions facebook': 12}, {'date': '8/25/22', 'Form Submissions adwords': 3, 'Form Submissions nan': 16, 'Form Submissions outbrain': 2, 'Form Submissions fb_paid': 30, 'Form Submissions hs_automation': 9, 'Form Submissions google_paid': 3, 'Form Submissions Herefish': 33, 'Form Submissions hs_email': 7, 'Form Submissions facebook': 28}, {'date': '8/26/22', 'Form Submissions adwords': 71, 'Form Submissions nan': 9, 'Form Submissions outbrain': 4, 'Form Submissions fb_paid': 6, 'Form Submissions hs_automation': 11, 'Form Submissions google_paid': 4, 'Form Submissions Herefish': 2, 'Form Submissions hs_email': 6, 'Form Submissions facebook': 10}, {'date': '8/27/22', 'Form Submissions adwords': 64, 'Form Submissions nan': 29, 'Form Submissions outbrain': 35, 'Form Submissions fb_paid': 42, 'Form Submissions hs_automation': 14, 'Form Submissions google_paid': 4, 'Form Submissions Herefish': 34, 'Form Submissions hs_email': 16, 'Form Submissions facebook': 34}, {'date': '8/28/22', 'Form Submissions adwords': 237, 'Form Submissions nan': 7, 'Form Submissions outbrain': 2, 'Form Submissions fb_paid': 19, 'Form Submissions hs_automation': 4, 'Form Submissions google_paid': 7, 'Form Submissions Herefish': 3, 'Form Submissions hs_email': 1, 'Form Submissions facebook': 7}, {'date': '8/29/22', 'Form Submissions adwords': 34, 'Form Submissions nan': 7, 'Form Submissions outbrain': 1, 'Form Submissions fb_paid': 4, 'Form Submissions hs_automation': 0, 'Form Submissions google_paid': 3, 'Form Submissions Herefish': 13, 'Form Submissions hs_email': 2, 'Form Submissions facebook': 8}, {'date': '8/30/22', 'Form Submissions adwords': 4, 'Form Submissions nan': 0, 'Form Submissions outbrain': 0, 'Form Submissions fb_paid': 1, 'Form Submissions hs_automation': 1, 'Form Submissions google_paid': 1, 'Form Submissions Herefish': 0, 'Form Submissions hs_email': 0, 'Form Submissions facebook': 1}, {'date': '8/31/22', 'Form Submissions adwords': 6, 'Form Submissions nan': 13, 'Form Submissions outbrain': 10, 'Form Submissions fb_paid': 14, 'Form Submissions hs_automation': 31, 'Form Submissions google_paid': 15, 'Form Submissions Herefish': 22, 'Form Submissions hs_email': 11, 'Form Submissions facebook': 15}, {'date': '9/1/22', 'Form Submissions adwords': 25, 'Form Submissions nan': 1, 'Form Submissions outbrain': 0, 'Form Submissions fb_paid': 2, 'Form Submissions hs_automation': 1, 'Form Submissions google_paid': 0, 'Form Submissions Herefish': 3, 'Form Submissions hs_email': 7, 'Form Submissions facebook': 1}, {'date': '9/2/22', 'Form Submissions adwords': 16, 'Form Submissions nan': 2, 'Form Submissions outbrain': 1, 'Form Submissions fb_paid': 7, 'Form Submissions hs_automation': 8, 'Form Submissions google_paid': 3, 'Form Submissions Herefish': 4, 'Form Submissions hs_email': 3, 'Form Submissions facebook': 2}, {'date': '9/3/22', 'Form Submissions adwords': 4, 'Form Submissions nan': 3, 'Form Submissions outbrain': 2, 'Form Submissions fb_paid': 8, 'Form Submissions hs_automation': 4, 'Form Submissions google_paid': 0, 'Form Submissions Herefish': 5, 'Form Submissions hs_email': 1, 'Form Submissions facebook': 2}, {'date': '9/4/22', 'Form Submissions adwords': 12, 'Form Submissions nan': 7, 'Form Submissions outbrain': 3, 'Form Submissions fb_paid': 0, 'Form Submissions hs_automation': 2, 'Form Submissions google_paid': 3, 'Form Submissions Herefish': 1, 'Form Submissions hs_email': 2, 'Form Submissions facebook': 2}, {'date': '9/5/22', 'Form Submissions adwords': 64, 'Form Submissions nan': 4, 'Form Submissions outbrain': 4, 'Form Submissions fb_paid': 22, 'Form Submissions hs_automation': 3, 'Form Submissions google_paid': 4, 'Form Submissions Herefish': 16, 'Form Submissions hs_email': 1, 'Form Submissions facebook': 1}, {'date': '9/6/22', 'Form Submissions adwords': 43, 'Form Submissions nan': 7, 'Form Submissions outbrain': 9, 'Form Submissions fb_paid': 14, 'Form Submissions hs_automation': 0, 'Form Submissions google_paid': 25, 'Form Submissions Herefish': 13, 'Form Submissions hs_email': 17, 'Form Submissions facebook': 5}, {'date': '9/7/22', 'Form Submissions adwords': 21, 'Form Submissions nan': 8, 'Form Submissions outbrain': 18, 'Form Submissions fb_paid': 8, 'Form Submissions hs_automation': 8, 'Form Submissions google_paid': 0, 'Form Submissions Herefish': 4, 'Form Submissions hs_email': 3, 'Form Submissions facebook': 7}, {'date': '9/8/22', 'Form Submissions adwords': 6, 'Form Submissions nan': 6, 'Form Submissions outbrain': 11, 'Form Submissions fb_paid': 1, 'Form Submissions hs_automation': 4, 'Form Submissions google_paid': 4, 'Form Submissions Herefish': 1, 'Form Submissions hs_email': 13, 'Form Submissions facebook': 3}, {'date': '9/9/22', 'Form Submissions adwords': 0, 'Form Submissions nan': 1, 'Form Submissions outbrain': 1, 'Form Submissions fb_paid': 1, 'Form Submissions hs_automation': 1, 'Form Submissions google_paid': 1, 'Form Submissions Herefish': 0, 'Form Submissions hs_email': 0, 'Form Submissions facebook': 0}, {'date': '9/10/22', 'Form Submissions adwords': 15, 'Form Submissions nan': 2, 'Form Submissions outbrain': 19, 'Form Submissions fb_paid': 17, 'Form Submissions hs_automation': 5, 'Form Submissions google_paid': 7, 'Form Submissions Herefish': 11, 'Form Submissions hs_email': 4, 'Form Submissions facebook': 11}, {'date': '9/11/22', 'Form Submissions adwords': 15, 'Form Submissions nan': 2, 'Form Submissions outbrain': 3, 'Form Submissions fb_paid': 3, 'Form Submissions hs_automation': 1, 'Form Submissions google_paid': 4, 'Form Submissions Herefish': 3, 'Form Submissions hs_email': 4, 'Form Submissions facebook': 0}, {'date': '9/12/22', 'Form Submissions adwords': 46, 'Form Submissions nan': 7, 'Form Submissions outbrain': 4, 'Form Submissions fb_paid': 2, 'Form Submissions hs_automation': 15, 'Form Submissions google_paid': 16, 'Form Submissions Herefish': 4, 'Form Submissions hs_email': 4, 'Form Submissions facebook': 10}, {'date': '9/13/22', 'Form Submissions adwords': 15, 'Form Submissions nan': 0, 'Form Submissions outbrain': 1, 'Form Submissions fb_paid': 0, 'Form Submissions hs_automation': 0, 'Form Submissions google_paid': 1, 'Form Submissions Herefish': 0, 'Form Submissions hs_email': 0, 'Form Submissions facebook': 1}, {'date': '9/14/22', 'Form Submissions adwords': 2, 'Form Submissions nan': 0, 'Form Submissions outbrain': 0, 'Form Submissions fb_paid': 0, 'Form Submissions hs_automation': 0, 'Form Submissions google_paid': 0, 'Form Submissions Herefish': 1, 'Form Submissions hs_email': 0, 'Form Submissions facebook': 0}, {'date': '9/15/22', 'Form Submissions adwords': 3, 'Form Submissions nan': 1, 'Form Submissions outbrain': 1, 'Form Submissions fb_paid': 1, 'Form Submissions hs_automation': 1, 'Form Submissions google_paid': 1, 'Form Submissions Herefish': 0, 'Form Submissions hs_email': 0, 'Form Submissions facebook': 1}, {'date': '9/16/22', 'Form Submissions adwords': 20, 'Form Submissions nan': 0, 'Form Submissions outbrain': 0, 'Form Submissions fb_paid': 1, 'Form Submissions hs_automation': 2, 'Form Submissions google_paid': 1, 'Form Submissions Herefish': 1, 'Form Submissions hs_email': 1, 'Form Submissions facebook': 1}, {'date': '9/17/22', 'Form Submissions adwords': 25, 'Form Submissions nan': 0, 'Form Submissions outbrain': 2, 'Form Submissions fb_paid': 2, 'Form Submissions hs_automation': 4, 'Form Submissions google_paid': 1, 'Form Submissions Herefish': 0, 'Form Submissions hs_email': 1, 'Form Submissions facebook': 3}, {'date': '9/18/22', 'Form Submissions adwords': 33, 'Form Submissions nan': 7, 'Form Submissions outbrain': 2, 'Form Submissions fb_paid': 3, 'Form Submissions hs_automation': 2, 'Form Submissions google_paid': 3, 'Form Submissions Herefish': 1, 'Form Submissions hs_email': 6, 'Form Submissions facebook': 1}], ['darkgoldenrod', 'coral', 'darkseagreen', 'blueviolet', 'darycyan', 'aqua', 'darksalmon', 'dimgrey', 'dodgerblue'], ['Form Submissions adwords', 'Form Submissions nan', 'Form Submissions outbrain', 'Form Submissions fb_paid', 'Form Submissions hs_automation', 'Form Submissions google_paid', 'Form Submissions Herefish', 'Form Submissions hs_email', 'Form Submissions facebook'], "Form Submissions by Source")
+    </script>
+  </div>
+</div>
+<h1>Full Weekly Data</h1>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Week</th>
+      <th>Hits</th>
+      <th>Hits adwords</th>
+      <th>Hits outbrain</th>
+      <th>Hits fb_paid</th>
+      <th>Hits hs_automation</th>
+      <th>Hits google_paid</th>
+      <th>Hits hs_email</th>
+      <th>Hits facebook</th>
+      <th>Hits seo</th>
+      <th>Hits info</th>
+      <th>Hits lead</th>
+      <th>Hits job</th>
+      <th>Unique Users</th>
+      <th>Unique Users adwords</th>
+      <th>Unique Users outbrain</th>
+      <th>Unique Users fb_paid</th>
+      <th>Unique Users hs_automation</th>
+      <th>Unique Users google_paid</th>
+      <th>Unique Users hs_email</th>
+      <th>Unique Users facebook</th>
+      <th>Unique Users seo</th>
+      <th>Unique Users info</th>
+      <th>Unique Users lead</th>
+      <th>Unique Users job</th>
+      <th>Form Submissions</th>
+      <th>Form Submissions adwords</th>
+      <th>Form Submissions outbrain</th>
+      <th>Form Submissions fb_paid</th>
+      <th>Form Submissions hs_automation</th>
+      <th>Form Submissions google_paid</th>
+      <th>Form Submissions hs_email</th>
+      <th>Form Submissions facebook</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>8/22/22</td>
+      <td>79410</td>
+      <td>22988</td>
+      <td>12108</td>
+      <td>375</td>
+      <td>1058</td>
+      <td>28</td>
+      <td>606</td>
+      <td>537</td>
+      <td>6556</td>
+      <td>27279</td>
+      <td>4959</td>
+      <td>597</td>
+      <td>39784</td>
+      <td>1424</td>
+      <td>9358</td>
+      <td>595</td>
+      <td>189</td>
+      <td>243</td>
+      <td>661</td>
+      <td>400</td>
+      <td>9684</td>
+      <td>9664</td>
+      <td>6338</td>
+      <td>26</td>
+      <td>849</td>
+      <td>166</td>
+      <td>88</td>
+      <td>41</td>
+      <td>21</td>
+      <td>107</td>
+      <td>207</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>8/29/22</td>
+      <td>72342</td>
+      <td>4653</td>
+      <td>49969</td>
+      <td>596</td>
+      <td>718</td>
+      <td>2406</td>
+      <td>2864</td>
+      <td>1068</td>
+      <td>862</td>
+      <td>4950</td>
+      <td>917</td>
+      <td>1121</td>
+      <td>54951</td>
+      <td>1650</td>
+      <td>24569</td>
+      <td>1540</td>
+      <td>931</td>
+      <td>477</td>
+      <td>286</td>
+      <td>351</td>
+      <td>6800</td>
+      <td>12553</td>
+      <td>4728</td>
+      <td>70</td>
+      <td>1592</td>
+      <td>254</td>
+      <td>154</td>
+      <td>217</td>
+      <td>374</td>
+      <td>11</td>
+      <td>52</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>9/5/22</td>
+      <td>87064</td>
+      <td>48371</td>
+      <td>5019</td>
+      <td>390</td>
+      <td>975</td>
+      <td>711</td>
+      <td>223</td>
+      <td>1582</td>
+      <td>25030</td>
+      <td>2041</td>
+      <td>136</td>
+      <td>440</td>
+      <td>46568</td>
+      <td>7508</td>
+      <td>28424</td>
+      <td>96</td>
+      <td>22</td>
+      <td>139</td>
+      <td>299</td>
+      <td>210</td>
+      <td>5986</td>
+      <td>2751</td>
+      <td>207</td>
+      <td>263</td>
+      <td>417</td>
+      <td>27</td>
+      <td>18</td>
+      <td>58</td>
+      <td>61</td>
+      <td>30</td>
+      <td>104</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>9/12/22</td>
+      <td>119859</td>
+      <td>28985</td>
+      <td>23768</td>
+      <td>1045</td>
+      <td>212</td>
+      <td>45</td>
+      <td>345</td>
+      <td>569</td>
+      <td>57421</td>
+      <td>4213</td>
+      <td>1483</td>
+      <td>251</td>
+      <td>102996</td>
+      <td>11893</td>
+      <td>3027</td>
+      <td>1228</td>
+      <td>772</td>
+      <td>311</td>
+      <td>485</td>
+      <td>276</td>
+      <td>69782</td>
+      <td>7341</td>
+      <td>5911</td>
+      <td>939</td>
+      <td>497</td>
+      <td>278</td>
+      <td>63</td>
+      <td>34</td>
+      <td>18</td>
+      <td>29</td>
+      <td>38</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+<h1>Full Daily Data</h1>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Date</th>
+      <th>Hits</th>
+      <th>Hits adwords</th>
+      <th>Hits outbrain</th>
+      <th>Hits fb_paid</th>
+      <th>Hits hs_automation</th>
+      <th>Hits google_paid</th>
+      <th>Hits hs_email</th>
+      <th>Hits facebook</th>
+      <th>Hits seo</th>
+      <th>Hits info</th>
+      <th>Hits lead</th>
+      <th>Hits job</th>
+      <th>Unique Users</th>
+      <th>Unique Users adwords</th>
+      <th>Unique Users outbrain</th>
+      <th>Unique Users fb_paid</th>
+      <th>Unique Users hs_automation</th>
+      <th>Unique Users google_paid</th>
+      <th>Unique Users hs_email</th>
+      <th>Unique Users facebook</th>
+      <th>Unique Users seo</th>
+      <th>Unique Users info</th>
+      <th>Unique Users lead</th>
+      <th>Unique Users job</th>
+      <th>Form Submissions</th>
+      <th>Form Submissions adwords</th>
+      <th>Form Submissions outbrain</th>
+      <th>Form Submissions fb_paid</th>
+      <th>Form Submissions hs_automation</th>
+      <th>Form Submissions google_paid</th>
+      <th>Form Submissions hs_email</th>
+      <th>Form Submissions facebook</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>8/22/22</td>
+      <td>18857</td>
+      <td>1053</td>
+      <td>2278</td>
+      <td>733</td>
+      <td>438</td>
+      <td>681</td>
+      <td>143</td>
+      <td>204</td>
+      <td>3396</td>
+      <td>2764</td>
+      <td>2294</td>
+      <td>374</td>
+      <td>10404</td>
+      <td>1611</td>
+      <td>1464</td>
+      <td>189</td>
+      <td>117</td>
+      <td>1081</td>
+      <td>1015</td>
+      <td>422</td>
+      <td>1656</td>
+      <td>998</td>
+      <td>65</td>
+      <td>9</td>
+      <td>136</td>
+      <td>79</td>
+      <td>0</td>
+      <td>1</td>
+      <td>4</td>
+      <td>11</td>
+      <td>10</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>8/23/22</td>
+      <td>30196</td>
+      <td>6347</td>
+      <td>70</td>
+      <td>807</td>
+      <td>272</td>
+      <td>1866</td>
+      <td>1133</td>
+      <td>934</td>
+      <td>6163</td>
+      <td>2914</td>
+      <td>7</td>
+      <td>2563</td>
+      <td>2560</td>
+      <td>70</td>
+      <td>859</td>
+      <td>136</td>
+      <td>113</td>
+      <td>9</td>
+      <td>45</td>
+      <td>134</td>
+      <td>463</td>
+      <td>302</td>
+      <td>63</td>
+      <td>104</td>
+      <td>286</td>
+      <td>123</td>
+      <td>44</td>
+      <td>1</td>
+      <td>23</td>
+      <td>33</td>
+      <td>26</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>8/24/22</td>
+      <td>3360</td>
+      <td>19</td>
+      <td>215</td>
+      <td>425</td>
+      <td>28</td>
+      <td>2</td>
+      <td>170</td>
+      <td>105</td>
+      <td>428</td>
+      <td>276</td>
+      <td>356</td>
+      <td>414</td>
+      <td>18895</td>
+      <td>989</td>
+      <td>5168</td>
+      <td>1002</td>
+      <td>1755</td>
+      <td>477</td>
+      <td>271</td>
+      <td>820</td>
+      <td>728</td>
+      <td>2636</td>
+      <td>2066</td>
+      <td>782</td>
+      <td>420</td>
+      <td>318</td>
+      <td>17</td>
+      <td>34</td>
+      <td>14</td>
+      <td>12</td>
+      <td>8</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>8/25/22</td>
+      <td>13272</td>
+      <td>1062</td>
+      <td>2699</td>
+      <td>293</td>
+      <td>1110</td>
+      <td>103</td>
+      <td>589</td>
+      <td>709</td>
+      <td>914</td>
+      <td>662</td>
+      <td>499</td>
+      <td>709</td>
+      <td>1576</td>
+      <td>129</td>
+      <td>170</td>
+      <td>107</td>
+      <td>93</td>
+      <td>23</td>
+      <td>32</td>
+      <td>39</td>
+      <td>452</td>
+      <td>3</td>
+      <td>121</td>
+      <td>43</td>
+      <td>133</td>
+      <td>3</td>
+      <td>2</td>
+      <td>30</td>
+      <td>9</td>
+      <td>3</td>
+      <td>7</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>8/26/22</td>
+      <td>10021</td>
+      <td>1268</td>
+      <td>788</td>
+      <td>714</td>
+      <td>1344</td>
+      <td>58</td>
+      <td>100</td>
+      <td>693</td>
+      <td>600</td>
+      <td>48</td>
+      <td>1899</td>
+      <td>875</td>
+      <td>2085</td>
+      <td>49</td>
+      <td>395</td>
+      <td>159</td>
+      <td>178</td>
+      <td>15</td>
+      <td>117</td>
+      <td>35</td>
+      <td>415</td>
+      <td>172</td>
+      <td>173</td>
+      <td>87</td>
+      <td>124</td>
+      <td>71</td>
+      <td>4</td>
+      <td>6</td>
+      <td>11</td>
+      <td>4</td>
+      <td>6</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>8/27/22</td>
+      <td>1700</td>
+      <td>26</td>
+      <td>74</td>
+      <td>92</td>
+      <td>79</td>
+      <td>31</td>
+      <td>282</td>
+      <td>162</td>
+      <td>325</td>
+      <td>143</td>
+      <td>84</td>
+      <td>99</td>
+      <td>1010</td>
+      <td>120</td>
+      <td>245</td>
+      <td>44</td>
+      <td>15</td>
+      <td>13</td>
+      <td>19</td>
+      <td>4</td>
+      <td>65</td>
+      <td>115</td>
+      <td>22</td>
+      <td>35</td>
+      <td>271</td>
+      <td>64</td>
+      <td>35</td>
+      <td>42</td>
+      <td>14</td>
+      <td>4</td>
+      <td>16</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td>8/28/22</td>
+      <td>18573</td>
+      <td>34</td>
+      <td>1991</td>
+      <td>1087</td>
+      <td>1514</td>
+      <td>107</td>
+      <td>368</td>
+      <td>752</td>
+      <td>6567</td>
+      <td>2886</td>
+      <td>1287</td>
+      <td>681</td>
+      <td>8150</td>
+      <td>1607</td>
+      <td>1620</td>
+      <td>538</td>
+      <td>98</td>
+      <td>26</td>
+      <td>352</td>
+      <td>423</td>
+      <td>1357</td>
+      <td>26</td>
+      <td>657</td>
+      <td>373</td>
+      <td>286</td>
+      <td>237</td>
+      <td>2</td>
+      <td>19</td>
+      <td>4</td>
+      <td>7</td>
+      <td>1</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>8/29/22</td>
+      <td>9942</td>
+      <td>469</td>
+      <td>3087</td>
+      <td>344</td>
+      <td>140</td>
+      <td>667</td>
+      <td>26</td>
+      <td>573</td>
+      <td>3094</td>
+      <td>306</td>
+      <td>168</td>
+      <td>55</td>
+      <td>12292</td>
+      <td>1935</td>
+      <td>54</td>
+      <td>222</td>
+      <td>1065</td>
+      <td>1251</td>
+      <td>96</td>
+      <td>806</td>
+      <td>779</td>
+      <td>2528</td>
+      <td>1070</td>
+      <td>570</td>
+      <td>72</td>
+      <td>34</td>
+      <td>1</td>
+      <td>4</td>
+      <td>0</td>
+      <td>3</td>
+      <td>2</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>8/30/22</td>
+      <td>9293</td>
+      <td>975</td>
+      <td>1753</td>
+      <td>145</td>
+      <td>316</td>
+      <td>580</td>
+      <td>661</td>
+      <td>458</td>
+      <td>1351</td>
+      <td>298</td>
+      <td>600</td>
+      <td>184</td>
+      <td>19966</td>
+      <td>1224</td>
+      <td>3167</td>
+      <td>382</td>
+      <td>483</td>
+      <td>1705</td>
+      <td>527</td>
+      <td>762</td>
+      <td>6022</td>
+      <td>1422</td>
+      <td>2575</td>
+      <td>135</td>
+      <td>9</td>
+      <td>4</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>8/31/22</td>
+      <td>14524</td>
+      <td>940</td>
+      <td>4075</td>
+      <td>413</td>
+      <td>182</td>
+      <td>863</td>
+      <td>882</td>
+      <td>343</td>
+      <td>1822</td>
+      <td>1923</td>
+      <td>958</td>
+      <td>895</td>
+      <td>12410</td>
+      <td>96</td>
+      <td>921</td>
+      <td>1206</td>
+      <td>1055</td>
+      <td>1001</td>
+      <td>796</td>
+      <td>854</td>
+      <td>914</td>
+      <td>957</td>
+      <td>219</td>
+      <td>974</td>
+      <td>137</td>
+      <td>6</td>
+      <td>10</td>
+      <td>14</td>
+      <td>31</td>
+      <td>15</td>
+      <td>11</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>9/1/22</td>
+      <td>17394</td>
+      <td>470</td>
+      <td>2918</td>
+      <td>904</td>
+      <td>1567</td>
+      <td>452</td>
+      <td>837</td>
+      <td>693</td>
+      <td>2992</td>
+      <td>3162</td>
+      <td>604</td>
+      <td>140</td>
+      <td>16668</td>
+      <td>1737</td>
+      <td>56</td>
+      <td>32</td>
+      <td>12</td>
+      <td>1555</td>
+      <td>980</td>
+      <td>1508</td>
+      <td>7173</td>
+      <td>931</td>
+      <td>421</td>
+      <td>73</td>
+      <td>40</td>
+      <td>25</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>7</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>9/2/22</td>
+      <td>14346</td>
+      <td>1201</td>
+      <td>2024</td>
+      <td>1020</td>
+      <td>375</td>
+      <td>772</td>
+      <td>613</td>
+      <td>220</td>
+      <td>2697</td>
+      <td>577</td>
+      <td>1549</td>
+      <td>509</td>
+      <td>11704</td>
+      <td>344</td>
+      <td>3711</td>
+      <td>1185</td>
+      <td>103</td>
+      <td>226</td>
+      <td>269</td>
+      <td>162</td>
+      <td>2312</td>
+      <td>1078</td>
+      <td>499</td>
+      <td>473</td>
+      <td>48</td>
+      <td>16</td>
+      <td>1</td>
+      <td>7</td>
+      <td>8</td>
+      <td>3</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>9/3/22</td>
+      <td>1652</td>
+      <td>174</td>
+      <td>241</td>
+      <td>75</td>
+      <td>19</td>
+      <td>48</td>
+      <td>91</td>
+      <td>139</td>
+      <td>134</td>
+      <td>95</td>
+      <td>45</td>
+      <td>40</td>
+      <td>6362</td>
+      <td>109</td>
+      <td>786</td>
+      <td>37</td>
+      <td>1071</td>
+      <td>382</td>
+      <td>592</td>
+      <td>236</td>
+      <td>596</td>
+      <td>571</td>
+      <td>376</td>
+      <td>389</td>
+      <td>30</td>
+      <td>4</td>
+      <td>2</td>
+      <td>8</td>
+      <td>4</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>9/4/22</td>
+      <td>9563</td>
+      <td>1489</td>
+      <td>1116</td>
+      <td>1166</td>
+      <td>61</td>
+      <td>500</td>
+      <td>223</td>
+      <td>641</td>
+      <td>189</td>
+      <td>1394</td>
+      <td>1264</td>
+      <td>643</td>
+      <td>11571</td>
+      <td>308</td>
+      <td>590</td>
+      <td>458</td>
+      <td>746</td>
+      <td>539</td>
+      <td>1033</td>
+      <td>95</td>
+      <td>1553</td>
+      <td>695</td>
+      <td>1430</td>
+      <td>1312</td>
+      <td>33</td>
+      <td>12</td>
+      <td>3</td>
+      <td>0</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>9/5/22</td>
+      <td>5570</td>
+      <td>301</td>
+      <td>1123</td>
+      <td>363</td>
+      <td>443</td>
+      <td>236</td>
+      <td>88</td>
+      <td>125</td>
+      <td>499</td>
+      <td>451</td>
+      <td>430</td>
+      <td>710</td>
+      <td>6270</td>
+      <td>712</td>
+      <td>716</td>
+      <td>394</td>
+      <td>560</td>
+      <td>80</td>
+      <td>473</td>
+      <td>248</td>
+      <td>1263</td>
+      <td>577</td>
+      <td>337</td>
+      <td>181</td>
+      <td>120</td>
+      <td>64</td>
+      <td>4</td>
+      <td>22</td>
+      <td>3</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>9/6/22</td>
+      <td>19625</td>
+      <td>1203</td>
+      <td>3136</td>
+      <td>948</td>
+      <td>1100</td>
+      <td>413</td>
+      <td>1529</td>
+      <td>1250</td>
+      <td>3926</td>
+      <td>457</td>
+      <td>250</td>
+      <td>489</td>
+      <td>2754</td>
+      <td>405</td>
+      <td>450</td>
+      <td>24</td>
+      <td>112</td>
+      <td>389</td>
+      <td>81</td>
+      <td>2</td>
+      <td>69</td>
+      <td>123</td>
+      <td>181</td>
+      <td>164</td>
+      <td>132</td>
+      <td>43</td>
+      <td>9</td>
+      <td>14</td>
+      <td>0</td>
+      <td>25</td>
+      <td>17</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>9/7/22</td>
+      <td>7386</td>
+      <td>227</td>
+      <td>1000</td>
+      <td>572</td>
+      <td>909</td>
+      <td>253</td>
+      <td>720</td>
+      <td>791</td>
+      <td>1019</td>
+      <td>509</td>
+      <td>36</td>
+      <td>419</td>
+      <td>10282</td>
+      <td>2039</td>
+      <td>195</td>
+      <td>180</td>
+      <td>683</td>
+      <td>180</td>
+      <td>12</td>
+      <td>725</td>
+      <td>1490</td>
+      <td>1571</td>
+      <td>1475</td>
+      <td>382</td>
+      <td>78</td>
+      <td>21</td>
+      <td>18</td>
+      <td>8</td>
+      <td>8</td>
+      <td>0</td>
+      <td>3</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>9/8/22</td>
+      <td>9599</td>
+      <td>1054</td>
+      <td>412</td>
+      <td>293</td>
+      <td>566</td>
+      <td>1475</td>
+      <td>467</td>
+      <td>526</td>
+      <td>1757</td>
+      <td>707</td>
+      <td>44</td>
+      <td>13</td>
+      <td>7715</td>
+      <td>701</td>
+      <td>562</td>
+      <td>385</td>
+      <td>653</td>
+      <td>175</td>
+      <td>509</td>
+      <td>46</td>
+      <td>2314</td>
+      <td>1002</td>
+      <td>187</td>
+      <td>61</td>
+      <td>48</td>
+      <td>6</td>
+      <td>11</td>
+      <td>1</td>
+      <td>4</td>
+      <td>4</td>
+      <td>13</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>9/9/22</td>
+      <td>10400</td>
+      <td>1003</td>
+      <td>1354</td>
+      <td>431</td>
+      <td>246</td>
+      <td>589</td>
+      <td>231</td>
+      <td>714</td>
+      <td>2105</td>
+      <td>1212</td>
+      <td>491</td>
+      <td>401</td>
+      <td>1287</td>
+      <td>106</td>
+      <td>23</td>
+      <td>25</td>
+      <td>22</td>
+      <td>33</td>
+      <td>25</td>
+      <td>5</td>
+      <td>581</td>
+      <td>150</td>
+      <td>74</td>
+      <td>64</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>9/10/22</td>
+      <td>542</td>
+      <td>31</td>
+      <td>15</td>
+      <td>51</td>
+      <td>77</td>
+      <td>41</td>
+      <td>9</td>
+      <td>38</td>
+      <td>34</td>
+      <td>16</td>
+      <td>40</td>
+      <td>65</td>
+      <td>4410</td>
+      <td>271</td>
+      <td>436</td>
+      <td>63</td>
+      <td>459</td>
+      <td>775</td>
+      <td>176</td>
+      <td>120</td>
+      <td>668</td>
+      <td>186</td>
+      <td>352</td>
+      <td>436</td>
+      <td>91</td>
+      <td>15</td>
+      <td>19</td>
+      <td>17</td>
+      <td>5</td>
+      <td>7</td>
+      <td>4</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>9/11/22</td>
+      <td>13282</td>
+      <td>1394</td>
+      <td>4765</td>
+      <td>789</td>
+      <td>614</td>
+      <td>968</td>
+      <td>518</td>
+      <td>243</td>
+      <td>328</td>
+      <td>752</td>
+      <td>1021</td>
+      <td>343</td>
+      <td>5858</td>
+      <td>578</td>
+      <td>1104</td>
+      <td>747</td>
+      <td>369</td>
+      <td>44</td>
+      <td>89</td>
+      <td>758</td>
+      <td>597</td>
+      <td>185</td>
+      <td>348</td>
+      <td>205</td>
+      <td>36</td>
+      <td>15</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1</td>
+      <td>4</td>
+      <td>4</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>9/12/22</td>
+      <td>18576</td>
+      <td>3014</td>
+      <td>1825</td>
+      <td>1765</td>
+      <td>880</td>
+      <td>858</td>
+      <td>1052</td>
+      <td>192</td>
+      <td>5498</td>
+      <td>332</td>
+      <td>995</td>
+      <td>969</td>
+      <td>7478</td>
+      <td>4</td>
+      <td>976</td>
+      <td>344</td>
+      <td>1033</td>
+      <td>651</td>
+      <td>90</td>
+      <td>324</td>
+      <td>1127</td>
+      <td>1109</td>
+      <td>354</td>
+      <td>415</td>
+      <td>107</td>
+      <td>46</td>
+      <td>4</td>
+      <td>2</td>
+      <td>15</td>
+      <td>16</td>
+      <td>4</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>9/13/22</td>
+      <td>3191</td>
+      <td>135</td>
+      <td>1000</td>
+      <td>14</td>
+      <td>252</td>
+      <td>82</td>
+      <td>80</td>
+      <td>108</td>
+      <td>887</td>
+      <td>93</td>
+      <td>74</td>
+      <td>102</td>
+      <td>16268</td>
+      <td>2674</td>
+      <td>1757</td>
+      <td>342</td>
+      <td>1261</td>
+      <td>279</td>
+      <td>1969</td>
+      <td>1390</td>
+      <td>1175</td>
+      <td>394</td>
+      <td>1034</td>
+      <td>1344</td>
+      <td>18</td>
+      <td>15</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>9/14/22</td>
+      <td>12754</td>
+      <td>2456</td>
+      <td>655</td>
+      <td>217</td>
+      <td>796</td>
+      <td>463</td>
+      <td>731</td>
+      <td>227</td>
+      <td>1413</td>
+      <td>3054</td>
+      <td>337</td>
+      <td>345</td>
+      <td>1465</td>
+      <td>141</td>
+      <td>344</td>
+      <td>135</td>
+      <td>34</td>
+      <td>50</td>
+      <td>152</td>
+      <td>97</td>
+      <td>203</td>
+      <td>18</td>
+      <td>100</td>
+      <td>20</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>9/15/22</td>
+      <td>7816</td>
+      <td>1005</td>
+      <td>1818</td>
+      <td>28</td>
+      <td>326</td>
+      <td>58</td>
+      <td>347</td>
+      <td>236</td>
+      <td>2727</td>
+      <td>242</td>
+      <td>341</td>
+      <td>21</td>
+      <td>7507</td>
+      <td>445</td>
+      <td>2293</td>
+      <td>185</td>
+      <td>655</td>
+      <td>260</td>
+      <td>231</td>
+      <td>100</td>
+      <td>1290</td>
+      <td>983</td>
+      <td>157</td>
+      <td>39</td>
+      <td>9</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>9/16/22</td>
+      <td>9955</td>
+      <td>579</td>
+      <td>153</td>
+      <td>845</td>
+      <td>143</td>
+      <td>762</td>
+      <td>31</td>
+      <td>479</td>
+      <td>3680</td>
+      <td>1160</td>
+      <td>533</td>
+      <td>865</td>
+      <td>9298</td>
+      <td>997</td>
+      <td>3003</td>
+      <td>450</td>
+      <td>42</td>
+      <td>603</td>
+      <td>355</td>
+      <td>161</td>
+      <td>803</td>
+      <td>1183</td>
+      <td>520</td>
+      <td>269</td>
+      <td>27</td>
+      <td>20</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>9/17/22</td>
+      <td>4835</td>
+      <td>226</td>
+      <td>416</td>
+      <td>329</td>
+      <td>81</td>
+      <td>289</td>
+      <td>25</td>
+      <td>80</td>
+      <td>1493</td>
+      <td>700</td>
+      <td>517</td>
+      <td>12</td>
+      <td>19910</td>
+      <td>316</td>
+      <td>4217</td>
+      <td>351</td>
+      <td>706</td>
+      <td>789</td>
+      <td>629</td>
+      <td>888</td>
+      <td>6390</td>
+      <td>492</td>
+      <td>1157</td>
+      <td>1140</td>
+      <td>37</td>
+      <td>25</td>
+      <td>2</td>
+      <td>2</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>9/18/22</td>
+      <td>17412</td>
+      <td>776</td>
+      <td>1239</td>
+      <td>1759</td>
+      <td>1357</td>
+      <td>378</td>
+      <td>179</td>
+      <td>418</td>
+      <td>5445</td>
+      <td>1557</td>
+      <td>1051</td>
+      <td>517</td>
+      <td>11900</td>
+      <td>892</td>
+      <td>3867</td>
+      <td>426</td>
+      <td>1162</td>
+      <td>61</td>
+      <td>351</td>
+      <td>18</td>
+      <td>2760</td>
+      <td>30</td>
+      <td>134</td>
+      <td>444</td>
+      <td>59</td>
+      <td>33</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>3</td>
+      <td>6</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

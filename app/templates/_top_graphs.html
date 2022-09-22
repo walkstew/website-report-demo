@@ -1,0 +1,26 @@
+<div class="flex-container">
+  <div> <h1> Hits </h1> 
+    <h3> Last 7 Days: {{dat.hits}}</h3>
+    Previous 7: {{dat.ohits}}<br>
+    <svg width="500" height="400" id="svg1"></svg>
+    <script>
+      rolling_graph("#svg1", {{ dat.hits_data }})
+    </script>
+  </div>
+  <div> <h1> Unique Users </h1>
+    <h3> Last 7 Days: {{dat.uu}}</h3>
+    Previous 7: {{dat.ouu}}<br>
+    <svg width="500" height="400" id="svg2"></svg>
+    <script>
+      rolling_graph("#svg2",{{ dat.uu_data }})
+    </script>
+  </div>
+  <div><h1> Form Submissions </h1> 
+    <h3> Last 7 Days: {{dat.fs}}</h3>
+    Previous 7: {{dat.ofs}}<br>
+    <svg width="500" height="400" id="svg3"></svg>
+    <script>
+      rolling_graph("#svg3", {{ dat.fs_data }})
+    </script>
+    </div>
+</div> 

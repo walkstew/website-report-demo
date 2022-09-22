@@ -1,0 +1,8 @@
+<h2>Sunbound Website Report</h2>
+<h2>{{ title }}</h2>
+<h3 id="report_time">Report updated at: </h3>
+<div id="report_time_source" class="hidden">{{ report_time }}</div>
+{% if data_time %}
+<h3 id="data_time">Data current through: </h3>
+<div id="data_time_source" class="hidden">{{ data_time }}</div>
+{% endif %}

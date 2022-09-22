@@ -1,0 +1,98 @@
+<div class="flex-container flex-container--varHeight">
+  <div> 
+    <h1>Week Graphs</h1>
+    <div id="chart1"></div>
+    <div id="chart2"></div>
+    <div id="chart3"></div>
+    <div id="chart4"></div>
+    <div id="chart5"></div>
+    <script>
+      var svg = d3
+        .select("#chart1")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph({{week_out.data[0]}}, {{week_out.colors[0]}}, {{week_out.labels[0]}}, "{{titles[0]}}")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart2")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph({{week_out.data[1]}}, {{week_out.colors[1]}}, {{week_out.labels[1]}}, "{{titles[1]}}")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart3")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph({{week_out.data[2]}}, {{week_out.colors[2]}}, {{week_out.labels[2]}}, "{{titles[2]}}")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart4")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph({{week_out.data[3]}}, {{week_out.colors[3]}}, {{week_out.labels[3]}}, "{{titles[3]}}")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart5")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph({{week_out.data[4]}}, {{week_out.colors[4]}}, {{week_out.labels[4]}}, "{{titles[4]}}")
+    </script>
+  </div>
+  <div> 
+    <h1>Day Graphs</h1>
+    <div id="chart6"></div>
+    <div id="chart7"></div>
+    <div id="chart8"></div>
+    <div id="chart9"></div>
+    <div id="chart10"></div>
+    <script>
+      var svg = d3
+        .select("#chart6")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph({{day_out.data[0]}}, {{day_out.colors[0]}}, {{day_out.labels[0]}}, "{{titles[0]}}")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart7")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph({{day_out.data[1]}}, {{day_out.colors[1]}}, {{day_out.labels[1]}}, "{{titles[1]}}")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart8")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph({{day_out.data[2]}}, {{day_out.colors[2]}}, {{day_out.labels[2]}}, "{{titles[2]}}")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart9")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph({{day_out.data[3]}}, {{day_out.colors[3]}}, {{day_out.labels[3]}}, "{{titles[3]}}")
+    </script>
+    <script>
+      var svg = d3
+        .select("#chart10")
+        .append("svg")
+        .attr("height", 300)
+        .attr("width", 600);
+      area_graph({{day_out.data[4]}}, {{day_out.colors[4]}}, {{day_out.labels[4]}}, "{{titles[4]}}")
+    </script>
+  </div>
+</div>
